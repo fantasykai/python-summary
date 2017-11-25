@@ -20,10 +20,15 @@ print('')
 print('python 数据类型')
 print('数字类型：int, float, decimal.Decimal, fractions.Fraction, complex')
 print('字符串类型：str, bytes')
+print('列表: list')
+print('集合: set')
 print('元组：tuple')
+print('字典: dict')
 print('冻结集合：frozenset')
 print('布尔类型：True, False')
 print('None')
+
+print('在Python 3里，只有一种整数类型 int，表示为长整型，没有 python2 中的 Long。')
 
 print('----- 愉快的分割线 ---------')
 
@@ -33,6 +38,7 @@ octal = 0o177, 0x9ff, 0X9FF, 0b101010  # 八进制
 change = hex(10), oct(10), bin(10)
 nums = float('inf'), float('-inf'), float('nan')
 name = 'kai.fantasy'  # 字符串
+a, b, c = 1, 2, 'kai' ## 多变量赋值还可以这样玩
 
 print(counter)
 print(miles)
@@ -40,3 +46,4 @@ print(octal)
 print(name)
 print('将十进制数转化为十六进制、八进制、二进制表示的“字符串', change)
 print('无穷大, 无穷小, 非数', nums)
+print(a, b, c)
