@@ -55,14 +55,17 @@ print(type(a), type(b), type(c), type(d))
 
 print('也可以用 isinstance 来判断')
 
-print(isinstance(a, int)
 
-
-print('isinstance 和 type d 区别')
-
+print('isinstance 和 type 区别')
 print('type 不会认为子类是一种父类类型')
 print('isinstance 会认为子类是一种父类类型')
 
 
 print('在 Python2 中是没有布尔型的，它用数字 0 表示 False，用 1 表示 True。到 Python3 中，把 True 和 False 定义成关键字了，但它们的值还是 1 和 0，它们可以和数字相加。')
-		
+
+'''
+1、Python可以同时为多个变量赋值，如a, b = 1, 2。
+2、一个变量可以通过赋值指向不同类型的对象。
+3、数值的除法（/）总是返回一个浮点数，要获取整数使用//操作符。
+4、在混合计算时，Python会把整型转换成为浮点数。
+'''
