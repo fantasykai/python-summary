@@ -139,6 +139,7 @@ print(' ========= Tuple（元组） =======')
 
 tuple = ('abcde', 678, 90.23, True, False)
 tinytuple = (133, 'kai.fantasy')
+tup2 = (10,)
 
 print('元组', tuple)
 print('元组第一个元素', tuple[0])
@@ -146,3 +147,42 @@ print('元组第二个到第三个元素', tuple[1:3])
 print('元组第三个元素到最后', tuple[2:])
 print('元组两遍', tinytuple * 2)
 print('元组数据拼接', tuple + tinytuple)
+
+print('元组中的元素不可变，但可以包含可变元素，比如 list')
+print('一个元素，需要在元素后添加逗号', tup2)
+
+print('1、与字符串一样，元组的元素不能修改。')
+print('2、元组也可以被索引和切片，方法一样。')
+print('3、注意构造包含0或1个元素的元组的特殊语法规则。')
+print('4、元组也可以使用+操作符进行拼接。')
+
+
+print('')
+
+print('###### set (集合) #######')
+print('集合（set）是一个无序不重复元素的序列')
+print('基本功能是进行成员关系测试和删除重复元素。')
+print(
+    '可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。')
+
+
+student = {'Tom', '张三', '李四', '赵五', '王六', 'Jack', 'Tom', 'Jack'}
+
+print('输出集合，重复的元素被自动去掉', student)
+
+
+if ('张三' in student):
+    print(' 张三在学生集合中')
+else:
+    print('张三不在学生集合中')
+
+aset = set('abcdefg')
+bset = set('acefxyz')
+
+print('a set ', aset)
+print('b set ', bset)
+
+print('a和b的差集', aset - bset)
+print('a和b的并集', aset | bset)
+print('a和b的交集', aset & bset)
+print('a和b中不同时存在的元素', aset ^ bset)
