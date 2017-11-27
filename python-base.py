@@ -118,3 +118,31 @@ print('列表中第二个和第三个元素', list[1:3])
 print('列表中第三个到最后', list[2:])
 print('列表两遍', tlinlist * 2)
 print('列表拼接', list + tlinlist)
+
+
+lista = [1, 2, 3, 4, 5, 6, 7]
+
+lista[0] = 9
+
+lista[2:5] = [13, 14, 15]
+
+print(lista)
+
+print('1、List写在方括号之间，元素用逗号隔开。')
+print('2、和字符串一样，list可以被索引和切片。')
+print('3、List可以使用+操作符进行拼接。')
+print('4、List中的元素是可以改变的。')
+
+print()
+
+print(' ========= Tuple（元组） =======')
+
+tuple = ('abcde', 678, 90.23, True, False)
+tinytuple = (133, 'kai.fantasy')
+
+print('元组', tuple)
+print('元组第一个元素', tuple[0])
+print('元组第二个到第三个元素', tuple[1:3])
+print('元组第三个元素到最后', tuple[2:])
+print('元组两遍', tinytuple * 2)
+print('元组数据拼接', tuple + tinytuple)
