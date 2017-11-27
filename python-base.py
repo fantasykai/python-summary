@@ -109,15 +109,15 @@ print('##### list ###########')
 
 
 list = ['abcdef', 12345, 99.991, True, False]
-tlinlist = [139, 'kai.fantasy']
+tinylist = [139, 'kai.fantasy']
 
 
 print('list列表', list)
 print('列表中第一个元素', list[0])
 print('列表中第二个和第三个元素', list[1:3])
 print('列表中第三个到最后', list[2:])
-print('列表两遍', tlinlist * 2)
-print('列表拼接', list + tlinlist)
+print('列表两遍', tinylist * 2)
+print('列表拼接', list + tinylist)
 
 
 lista = [1, 2, 3, 4, 5, 6, 7]
@@ -186,3 +186,36 @@ print('a和b的差集', aset - bset)
 print('a和b的并集', aset | bset)
 print('a和b的交集', aset & bset)
 print('a和b中不同时存在的元素', aset ^ bset)
+
+print()
+
+print('###### Dictionary（字典）############')
+
+print('列表是有序的对象结合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取。')
+print('字典是一种映射类型，字典用"{ }"标识，它是一个无序的键(key) : 值(value)对集合。')
+print('键(key)必须使用不可变类型。')
+print('在同一个字典中，键(key)必须是唯一的。')
+
+dict = {}
+dict['one'] = '1 - java'
+dict[2] = '2 - javascript'
+
+tinydict = {'name': 'kai.fantasy', 'sex': 30, 'site': 'fantasykai.cc'}
+
+# 构造函数 dict() 可以直接从键值对序列中构建字典
+## dict([('Google', 1), ('Bing', 2), ('baidu', 3)])
+
+adict = {x: x**2 for x in [2, 4, 6]}
+
+
+print('输出键为 one的 值', dict['one'])
+print('输出键为 2 的值', dict[2])
+print('输出字典', tinydict)
+print('tinydict的keys', tinydict.keys())
+print('tinydict的values', tinydict.values())
+print('', adict)
+
+print('1、字典是一种映射类型，它的元素是键值对。')
+print('2、字典的关键字必须为不可变类型，且不能重复。')
+print('3、创建空字典使用 { }。')
+print('')
