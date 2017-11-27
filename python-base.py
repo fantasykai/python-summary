@@ -85,10 +85,36 @@ print('两遍字符串 ', str * 2)
 print('拼接字符串 ', str + 'TEST')
 
 
-print()
-
 print('Python 使用反斜杠(\)转义特殊字符，如果你不想让反斜杠发生转义，可以在字符串前面添加一个 r，表示原始字符串')
-
 
 print('kai.\nfantasy')
 print(r'kai.\nfantasy')
+
+# 反斜杠(\)可以作为续行符，表示下一行是上一行的延续。也可以使用 """...""" 或者 '''...''' 跨越多行
+
+print('Python 没有单独的字符类型，一个字符就是长度为1的字符串')
+
+print(r'''Python 字符串不能被改变。向一个索引位置赋值，比如word[0] = 'm'会导致错误''')
+
+print('1、反斜杠可以用来转义，使用r可以让反斜杠不发生转义。')
+print('2、字符串可以用+运算符连接在一起，用*运算符重复。')
+print('3、Python中的字符串有两种索引方式，从左往右以0开始，从右往左以-1开始。')
+print('4、Python中的字符串不能改变。')
+
+
+print()
+
+
+print('##### list ###########')
+
+
+list = ['abcdef', 12345, 99.991, True, False]
+tlinlist = [139, 'kai.fantasy']
+
+
+print('list列表', list)
+print('列表中第一个元素', list[0])
+print('列表中第二个和第三个元素', list[1:3])
+print('列表中第三个到最后', list[2:])
+print('列表两遍', tlinlist * 2)
+print('列表拼接', list + tlinlist)
