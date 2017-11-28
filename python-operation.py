@@ -199,12 +199,12 @@ else:
     print('a in list | a 不在 list 中')
 
 if (b not in list):
-	print('b not in list |  b 不在 list 中')
-else: 
-	print('b not in list |  b 在 list 中')
+    print('b not in list |  b 不在 list 中')
+else:
+    print('b not in list |  b 在 list 中')
 
 
-print(' Python身份运算符 ')	
+print(' Python身份运算符 ')
 
 print('is	is 是判断两个标识符是不是引用自一个对象	x is y, 类似 id(x) == id(y) , 如果引用的是同一个对象则返回 True，否则返回 False')
 print('is not	is not 是判断两个标识符是不是引用自不同对象	x is not y ， 类似 id(a) != id(b)。如果引用的不是同一个对象则返回结果 True，否则返回 False。')
@@ -212,5 +212,35 @@ print('is not	is not 是判断两个标识符是不是引用自不同对象	x is
 
 print(' id() 函数用于获取对象内存地址。')
 
+a = 20
+b = 20
+
+print('a = ', a)
+print('b = ', b)
+
+if (a is b):
+    print('a is b | a 和 b 引用同1个对象')
+else:
+    print('a is b | a 和 b 引用的不是同1个对象')
 
 
+if (id(a) is id(b)):
+    print('id(a) is id(b) | a 和 b 引用相同的对象')
+else:
+    print('id(a) is id(b) | a 和 b 引用不同的对象')
+
+b = 30
+if (a is b):
+    print('a is b | a 和 b 引用同1个对象')
+else:
+    print('a is b | a 和 b 引用的不是同1个对象')
+
+
+if (a is not b):
+    print('a is not b | a 和 b 引用同1个对象')
+else:
+    print('a is not b | a 和 b 引用的不是同1个对象')
+
+print()
+print('is 与 == 区别：')
+print('is 用于判断两个变量引用对象是否为同一个， == 用于判断引用变量的值是否相等。')
