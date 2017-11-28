@@ -244,3 +244,81 @@ else:
 print()
 print('is 与 == 区别：')
 print('is 用于判断两个变量引用对象是否为同一个， == 用于判断引用变量的值是否相等。')
+
+print()
+
+print('Python运算符优先级')
+
+print('**	指数 (最高优先级)')
+print('~ + -	按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@)')
+print('* / % //	乘，除，取模和取整除')
+print('+ -	加法减法')
+print('>> <<	右移，左移运算符')
+print('&	位 AND')
+print('^ |	位运算符')
+print('<= < > >=	比较运算符')
+print('<> == !=	等于运算符')
+print('= %= /= //= -= += *= **=	赋值运算符')
+print('is is not	身份运算符')
+print('in not in	成员运算符')
+print('not or and	逻辑运算符')
+
+print('')
+
+a = 20
+b = 10
+c = 15
+d = 5
+e = 0
+
+print('a = ', a)
+print('b = ', b)
+print('c = ', c)
+print('d = ', d)
+print('e = ', e)
+
+
+e = (a + b) * c / d
+print('e = (a + b) * c / d = ', e)
+
+
+e = ((a + b) * c) / d
+print('e = ((a + b ) * c) / d  = ', e)
+
+e = (a + b) * (c / d)
+print('e = (a + b ) * (c / d) = ', e)
+
+
+e = a + (b * c) / d
+print('e = a + (b * c) / d = ', e)
+
+
+print('数学函数')
+
+print('abs(x)	返回数字的绝对值，如abs(-10) 返回 10')
+print('ceil(x)	返回数字的上入整数，如math.ceil(4.1) 返回 5')
+print('cmp(x, y) 如果 x < y 返回 -1, 如果 x == y 返回 0, 如果 x > y 返回 1。 Python 3 已废弃 。使用 使用 (x>y)-(x<y) 替换。')
+print('exp(x)	返回e的x次幂(ex),如math.exp(1) 返回2.718281828459045')
+print('fabs(x)	返回数字的绝对值，如math.fabs(-10) 返回10.0')
+print('floor(x)	返回数字的下舍整数，如math.floor(4.9)返回 4')
+print('log(x)	如math.log(math.e)返回1.0,math.log(100,10)返回2.0')
+print('log10(x)	返回以10为基数的x的对数，如math.log10(100)返回 2.0')
+print('max(x1, x2,...)	返回给定参数的最大值，参数可以为序列。')
+print('min(x1, x2,...)	返回给定参数的最小值，参数可以为序列。')
+print('modf(x)	返回x的整数部分与小数部分，两部分的数值符号与x相同，整数部分以浮点型表示。')
+print('pow(x, y)	x**y 运算后的值。')
+print('round(x [,n])	返回浮点数x的四舍五入值，如给出n值，则代表舍入到小数点后的位数。')
+print('sqrt(x)	返回数字x的平方根。')
+
+print('')
+
+print('随机数函数')
+
+print('choice(seq)	从序列的元素中随机挑选一个元素，比如random.choice(range(10))，从0到9中随机挑选一个整数')
+print('randrange ([start,] stop [,step])	从指定范围内，按指定基数递增的集合中获取一个随机数，基数缺省值为1')
+print('random()	随机生成下一个实数，它在[0,1)范围内。')
+print('seed([x])	改变随机数生成器的种子seed。如果你不了解其原理，你不必特别去设定seed，Python会帮你选择seed。')
+print('shuffle(lst)	将序列的所有元素随机排序')
+print('uniform(x, y)	随机生成下一个实数，它在[x,y]范围内。')
+
+print('')
