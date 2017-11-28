@@ -119,7 +119,7 @@ c = a & b     # 12 = 0000 1100
 print('a & b  = ', c)
 
 
-c = a | b     # 61 = 0011 1101 
+c = a | b     # 61 = 0011 1101
 print('a | b = ', c)
 
 c = a ^ b     # 49 = 0011 0001
@@ -134,4 +134,46 @@ print('a << 2 = ', c)
 c = a >> 2    # 15 = 0000 1111
 print('a >> 2 = ', c)
 
+print()
+print('Python逻辑运算符')
 
+
+print('and	x and y	布尔"与" - 如果 x 为 False，x and y 返回 False，否则它返回 y 的计算值。	(a and b) 返回 20。')
+print('or	x or y	布尔"或" - 如果 x 是 True，它返回 x 的值，否则它返回 y 的计算值。	(a or b) 返回 10。')
+print('not	not x	布尔"非" - 如果 x 为 True，返回 False 。如果 x 为 False，它返回 True。	not(a and b) 返回 False')
+
+a = 10
+b = 20
+
+print('a = ', a)
+print('b = ', b)
+
+
+if (a and b):
+    print('a and b | a 和 b 都为 True')
+else:
+    print('a and b | a 和 b 有一个不为 true')
+
+
+if (a or b):
+    print('a or b | a 和 b 都为 True 或其中1个为True')
+else:
+    print('a or b | a 和 b 都不为True')
+
+a = 0
+print('a = ', a)
+if (a and b):
+    print('a and b |  a 和 b 都为 True')
+else:
+    print('a and b | a 和 b 有一个不为 true')
+
+
+if (a or b):
+    print('a or b | a 和 b 都为 True 或其中1个为True')
+else:
+    print('a or b | a 和 b 都不为True')
+
+if not(a and b):
+    print('not(a and b) | a 和 b 都为 False 或其中1个为False')
+else:
+    print('not(a and b) | a 和 b 都为True')
