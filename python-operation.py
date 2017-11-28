@@ -177,3 +177,40 @@ if not(a and b):
     print('not(a and b) | a 和 b 都为 False 或其中1个为False')
 else:
     print('not(a and b) | a 和 b 都为True')
+
+
+print()
+
+print('Python成员运算符')
+print('in	如果在指定的序列中找到值返回 True，否则返回 False。	x 在 y 序列中 , 如果 x 在 y 序列中返回 True。')
+print('not in	如果在指定的序列中没有找到值返回 True，否则返回 False。	x 不在 y 序列中 , 如果 x 不在 y 序列中返回 True。')
+
+a = 10
+b = 20
+list = [1, 2, 3, 4, 5]
+print('a = ', a)
+print('b = ', b)
+print('list = ', list)
+
+
+if (a in list):
+    print('a in list |  a 在 list 中')
+else:
+    print('a in list | a 不在 list 中')
+
+if (b not in list):
+	print('b not in list |  b 不在 list 中')
+else: 
+	print('b not in list |  b 在 list 中')
+
+
+print(' Python身份运算符 ')	
+
+print('is	is 是判断两个标识符是不是引用自一个对象	x is y, 类似 id(x) == id(y) , 如果引用的是同一个对象则返回 True，否则返回 False')
+print('is not	is not 是判断两个标识符是不是引用自不同对象	x is not y ， 类似 id(a) != id(b)。如果引用的不是同一个对象则返回结果 True，否则返回 False。')
+
+
+print(' id() 函数用于获取对象内存地址。')
+
+
+
