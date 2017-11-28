@@ -322,3 +322,22 @@ print('shuffle(lst)	将序列的所有元素随机排序')
 print('uniform(x, y)	随机生成下一个实数，它在[x,y]范围内。')
 
 print('')
+
+print('三角函数')
+
+print('acos(x)	返回x的反余弦弧度值。')
+print('asin(x)	返回x的反正弦弧度值。')
+print('atan(x)	返回x的反正切弧度值。')
+print('atan2(y, x)	返回给定的 X 及 Y 坐标值的反正切值。')
+print('cos(x)	返回x的弧度的余弦值。')
+print('hypot(x, y)	返回欧几里德范数 sqrt(x*x + y*y)。')
+print('sin(x)	返回的x弧度的正弦值。')
+print('tan(x)	返回x弧度的正切值。')
+print('degrees(x)	将弧度转换为角度,如degrees(math.pi/2) ， 返回90.0')
+print('radians(x)	将角度转换为弧度')
+print('')
+
+print('数学常量')
+print('pi	数学常量 pi（圆周率，一般以π来表示）')
+print('e	数学常量 e，e即自然常数（自然常数）。')
+
