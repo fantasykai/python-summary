@@ -12,3 +12,23 @@ list3 = ['a', 'b', 'c', 'd', 'e']
 print('list1 = ', list1)
 print('list2 = ', list2)
 print('list3 = ', list3)
+
+print('list1[0] ', list1[0])
+print('list1[1:5] ', list1[1:5])
+
+print(' list1[3] 为 ', list1[3])
+list1[3] = 2018
+print(' list1[3] 更新为 ', list1[3])
+
+print()
+print('删除列表元素')
+
+print('可以使用 del 语句来删除列表的的元素')
+
+list = ['Google', 'Bing', 'Baidu', 2017, True, 1000.20]
+
+print('list = ', list)
+
+del list[3]
+
+print(' del list[3] ', list)
