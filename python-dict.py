@@ -27,3 +27,34 @@ print("更新 age | dict['age'] = 29 | ", dict)
 
 dict['site'] = 'fantasykai.cc'
 print("添加字段 | dict['site'] = ", dict)
+
+print()
+print("删除字典元素")
+print("能删单一的元素也能清空字典，清空只需一项操作")
+print("用 del 命令进行删除操作")
+
+dict2 = {'name': 'kai.fanasy', 'age': 28,
+        'language': ['java', 'javascript', 'python']}
+
+print("dict2 = ", dict2)        
+
+del dict2['age']
+print("删除字典某个元素 del dict2['age'] ", dict2)
+dict2.clear()
+print("清空字段数据 dict2.clear() ", dict2)
+
+del dict2
+
+print("删除字典 del dict2 ")
+
+
+print("字典内置函数&方法 ")
+print("1	len(dict) 计算字典元素个数，即键的总数。")
+print("2	str(dict) 输出字典，以可打印的字符串表示。")
+print("3	type(variable) 返回输入的变量类型，如果变量是字典就返回字典类型。")
+print("")
+
+
+
+
+
