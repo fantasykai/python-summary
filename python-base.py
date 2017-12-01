@@ -219,3 +219,27 @@ print('1、字典是一种映射类型，它的元素是键值对。')
 print('2、字典的关键字必须为不可变类型，且不能重复。')
 print('3、创建空字典使用 { }。')
 print('')
+
+print("斐波那契数列")
+print("关键字end可以用于将结果输出到同一行，或者在输出的末尾添加不同的字符")
+
+a, b = 0, 1
+
+while b < 100:
+	print(b, end = ',')
+	a, b = b, a + b
+
+print()
+
+def fab(n):
+	if n<1:
+		print("...")
+		return -1
+	elif n==1 or n==2:
+	   return 1
+	else:
+		return fab(n-1)+fab(n-2)
+
+print(fab(10))
+
+
