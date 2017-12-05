@@ -60,5 +60,62 @@ print('vec1: ', vec1)
 
 vec2 = [[x, x**2] for x in vec]
 
-
 print("vec2: ", vec2)
+
+print("del 语句")
+print("使用 del 语句可以从一个列表中依索引而不是值来删除一个元素。这与使用 pop() 返回一个值不同。可以用 del 语句从列表中删除一个切割，或清空整个列表（我们以前介绍的方法是给该切割赋一个空列表）")
+
+print("元组和序列")
+print("元组由若干逗号分隔的值组成")
+
+print("元组在输出时总是有括号的，以便于正确表达嵌套结构。在输入时可能有或没有括号， 不过括号通常是必须的（如果元组是更大的表达式的一部分）")
+
+print("集合")
+
+print("集合是一个无序不重复元素的集。基本功能包括关系测试和消除重复元素")
+print("可以用大括号({})创建集合。注意：如果要创建一个空集合，你必须用 set() 而不是 {} ；后者创建一个空的字典，下一节我们会介绍这个数据结构。")
+
+print("字典")
+
+print("另一个非常有用的 Python 内建数据类型是字典。")
+print("序列是以连续的整数为索引，与此不同的是，字典以关键字为索引，关键字可以是任意不可变类型，通常用字符串或数值。")
+print("理解字典的最佳方式是把它看做无序的键=>值对集合。在同一个字典之内，关键字必须是互不相同")
+print("理解字典的最佳方式是把它看做无序的键=>值对集合。在同一个字典之内，关键字必须是互不相同")
+print("构造函数 dict() 直接从键值对元组列表中构建字典。如果有固定的模式，列表推导式指定特定的键值对")
+print("")
+print("遍历技巧")
+
+print("在字典中遍历时，关键字和对应的值可以使用 items() 方法同时解读出来：")
+
+sites = {'name': 'Google', 'zname': '谷歌'}
+
+for k, v in sites.items():
+    print(k, v)
+
+
+print("")
+
+print("在序列中遍历时，索引位置和对应值可以使用 enumerate() 函数同时得到：")
+
+for i, v in enumerate(['Google', 'Bing', 'Baidu']):
+    print(i, v)
+
+
+print()
+
+
+print("同时遍历两个或更多的序列，可以使用 zip() 组合")
+
+
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+
+for q, a in zip(questions, answers):
+    print('What is your {0}?  It is {1}.'.format(q, a))
+
+
+print()
+
+print("要反向遍历一个序列，首先指定这个序列，然后调用 reversed() 函数：")
+
+print()
