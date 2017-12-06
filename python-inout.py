@@ -63,3 +63,50 @@ print('常量 PI 的值近似为： {!r}。'.format(math.pi))
 print()
 print("可选项 ':' 和格式标识符可以跟着字段名。 这就允许对值进行更好的格式化。 下面的例子将 Pi 保留到小数点后三位")
 print('常量 PI 的值近似为 {0:.3f}。'.format(math.pi))
+
+print()
+print("在 ':' 后传入一个整数, 可以保证该域至少有这么多的宽度。 用于美化表格时很有用")
+print()
+
+table = {'Google': 1, 'Bing': 2, 'Baidu': 3}
+for name, num in table.items():
+    print('{0:10} ==> {1:10d}'.format(name, num))
+
+
+print()
+print("如果你有一个很长的格式化字符串, 而你不想将它们分开, 那么在格式化时通过变量名而非位置会是很好的事情")
+print("最简单的就是传入一个字典, 然后使用方括号 '[]' 来访问键值")
+
+
+table = {'Google': 1, 'Bing': 2, 'Baidu': 3}
+print(
+    'Google: {0[Google]:d}; Bing: {0[Bing]:d}; Baidu: {0[Baidu]:d}'.format(table))
+
+print("也可以通过在 table 变量前使用 '**' 来实现相同的功能")
+table = {'Google': 1, 'Bing': 2, 'Baidu': 3}
+print('Google: {Google:d}; Bing: {Bing:d}; Baidu: {Baidu:d}'.format(**table))
+
+print()
+print("旧式字符串格式化")
+print("% 操作符也可以实现字符串格式化。 它将左边的参数作为类似 sprintf() 式的格式化字符串, 而将右边的代入, 然后返回格式化后的字符串.")
+print('常量 PI 的值近似为：%5.3f。' % math.pi)
+
+print("因为 str.format() 比较新的函数， 大多数的 Python 代码仍然使用 % 操作符。但是因为这种旧式的格式化最终会从该语言中移除, 应该更多的使用 str.format().")
+print("")
+print("读取键盘输入")
+print("Python提供了 input() 置函数从标准输入读入一行文本，默认的标准输入是键盘")
+print("input 可以接收一个Python表达式作为输入，并将运算结果返回")
+print()
+str = input(" 请输入您的姓名 ：")
+print(" 您输入的是： ", str)
+print()
+print("读和写文件")
+print("open() 将会返回一个 file 对象，基本语法格式如下")
+print(" open(filename, mode)")
+print("filename：filename 变量是一个包含了你要访问的文件名称的字符串值")
+print("mode：mode决定了打开文件的模式：只读，写入，追加等。所有可取值见如下的完全列表。这个参数是非强制的，默认文件访问模式为只读(r)")
+
+
+f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "w")
+f.write(" open 文件和 写入测试")
+f.close()
