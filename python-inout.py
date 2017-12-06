@@ -108,5 +108,63 @@ print("mode：mode决定了打开文件的模式：只读，写入，追加等�
 
 
 f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "w")
-f.write(" open 文件和 写入测试")
+f.write(" python读取文件不错，方便啊, open 文件 \n 先来个写入测试看看~~\n")
 f.close()
+
+print()
+
+print("第一个参数为要打开的文件名")
+print("第二个参数描述文件如何使用的字符。 mode 可以是 'r' 如果文件只读, 'w' 只用于写 (如果存在同名文件则将被删除), 和 'a' 用于追加文件内容; 所写的任何数据都会被自动增加到末尾. 'r+' 同时用于读写。 mode 参数是可选的; 'r' 将是默认值。")
+print()
+print("文件对象的方法")
+print("本节中剩下的例子假设已经创建了一个称为 f 的文件对象。")
+print("f.read()")
+print("为了读取一个文件的内容，调用 f.read(size), 这将读取一定数目的数据, 然后作为字符串或字节对象返回")
+print("size 是一个可选的数字类型的参数。 当 size 被忽略了或者为负, 那么该文件的所有内容都将被读取并且返回")
+print()
+
+f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "r")
+str = f.read()
+print(str)
+
+f.close()
+
+
+print("f.readline()")
+print("f.readline() 会从文件中读取单独的一行。换行符为 '\n'。f.readline() 如果返回一个空字符串, 说明已经已经读取到最后一行。")
+print()
+f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "r")
+str = f.readline()
+print(str)
+f.close()
+
+print()
+
+print("f.readlines()")
+
+print("f.readlines() 将返回该文件中包含的所有行")
+print("如果设置可选参数 sizehint, 则读取指定长度的字节, 并且将这些字节按行分割。")
+
+f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "r")
+str = f.readlines()
+print(str)
+
+f.close()
+
+
+print("")
+print("另一种方式是迭代一个文件对象然后读取每行:")
+
+f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "r")
+
+for line in f:
+    print(line, end='')
+
+f.close()
+
+print()
+print("这个方法很简单, 但是并没有提供一个很好的控制。 因为两者的处理机制不同, 最好不要混用。")
+print("f.write()")
+print("f.write(string) 将 string 写入到文件中, 然后返回写入的字符数。")
+
+print()
