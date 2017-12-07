@@ -168,3 +168,39 @@ print("f.write()")
 print("f.write(string) 将 string 写入到文件中, 然后返回写入的字符数。")
 
 print()
+
+f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "w")
+num = f.write(" python读取文件不错，方便啊, open 文件 \n 先来个写入测试看看~~\n")
+
+print(num)
+
+f.close()
+
+print()
+
+print("如果要写入一些不是字符串的东西, 那么将需要先进行转换:")
+f = open("/Users/makai/workspace/github/fantasykai/python-summary/test1.txt", "w")
+
+
+f.close()
+
+print()
+
+print("f.tell()")
+print("f.tell() 返回文件对象当前所处的位置, 它是从文件开头开始算起的字节数。")
+print("f.seek()")
+print("如果要改变文件当前的位置, 可以使用 f.seek(offset, from_what) 函数。")
+print("from_what 的值, 如果是 0 表示开头, 如果是 1 表示当前位置, 2 表示文件的结尾，")
+print("seek(x,0) ： 从起始位置即文件首行首字符开始移动 x 个字符")
+print("seek(x,1) ： 表示从当前位置往后移动x个字符")
+print("seek(-x,2)：表示从文件的结尾往前移动x个字符")
+print("from_what 值为默认为0，即文件开头")
+
+f = open("/Users/makai/workspace/github/fantasykai/python-summary/test2.txt", "rb+")
+f.write(b'0123456789abcdef')
+f.seek(5)
+f.read(1)
+f.seek(-3, 2)
+f.read(1)
+
+f.close()
