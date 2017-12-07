@@ -2,6 +2,7 @@
 
 import math
 import pickle
+import pprint
 
 print("Python3 输入和输出")
 
@@ -232,9 +233,22 @@ selfref_list = [1, 2, 3]
 selfref_list.append(selfref_list)
 
 
-output = open('data.pk1', 'wb')
+output = open('data.pkl', 'wb')
 pickle.dump(data1, output)
 
 pickle.dump(selfref_list, output, -1)
 
 output.close()
+
+print()
+
+pk1_file = open('data.pkl', 'rb')
+
+data1 = pickle.load(pk1_file)
+pprint.pprint(data1)
+
+data2 = pickle.load(pk1_file)
+
+pprint.pprint(data2)
+
+pk1_file.close()
