@@ -1,6 +1,7 @@
 #!/usr/local/bin/python3.6
 
 import math
+import pickle
 
 print("Python3 输入和输出")
 
@@ -107,7 +108,7 @@ print("filename：filename 变量是一个包含了你要访问的文件名称�
 print("mode：mode决定了打开文件的模式：只读，写入，追加等。所有可取值见如下的完全列表。这个参数是非强制的，默认文件访问模式为只读(r)")
 
 
-f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "w")
+f = open("test.txt", "w")
 f.write(" python读取文件不错，方便啊, open 文件 \n 先来个写入测试看看~~\n")
 f.close()
 
@@ -123,7 +124,7 @@ print("为了读取一个文件的内容，调用 f.read(size), 这将读取一�
 print("size 是一个可选的数字类型的参数。 当 size 被忽略了或者为负, 那么该文件的所有内容都将被读取并且返回")
 print()
 
-f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "r")
+f = open("test.txt", "r")
 str = f.read()
 print(str)
 
@@ -133,7 +134,7 @@ f.close()
 print("f.readline()")
 print("f.readline() 会从文件中读取单独的一行。换行符为 '\n'。f.readline() 如果返回一个空字符串, 说明已经已经读取到最后一行。")
 print()
-f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "r")
+f = open("test.txt", "r")
 str = f.readline()
 print(str)
 f.close()
@@ -145,7 +146,7 @@ print("f.readlines()")
 print("f.readlines() 将返回该文件中包含的所有行")
 print("如果设置可选参数 sizehint, 则读取指定长度的字节, 并且将这些字节按行分割。")
 
-f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "r")
+f = open("test.txt", "r")
 str = f.readlines()
 print(str)
 
@@ -155,7 +156,7 @@ f.close()
 print("")
 print("另一种方式是迭代一个文件对象然后读取每行:")
 
-f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "r")
+f = open("test.txt", "r")
 
 for line in f:
     print(line, end='')
@@ -169,7 +170,7 @@ print("f.write(string) 将 string 写入到文件中, 然后返回写入的字�
 
 print()
 
-f = open("/Users/makai/workspace/github/fantasykai/python-summary/test.txt", "w")
+f = open("test.txt", "w")
 num = f.write(" python读取文件不错，方便啊, open 文件 \n 先来个写入测试看看~~\n")
 
 print(num)
@@ -179,7 +180,7 @@ f.close()
 print()
 
 print("如果要写入一些不是字符串的东西, 那么将需要先进行转换:")
-f = open("/Users/makai/workspace/github/fantasykai/python-summary/test1.txt", "w")
+f = open("test1.txt", "w")
 
 
 f.close()
@@ -196,7 +197,7 @@ print("seek(x,1) ： 表示从当前位置往后移动x个字符")
 print("seek(-x,2)：表示从文件的结尾往前移动x个字符")
 print("from_what 值为默认为0，即文件开头")
 
-f = open("/Users/makai/workspace/github/fantasykai/python-summary/test2.txt", "rb+")
+f = open("test2.txt", "rb+")
 f.write(b'0123456789abcdef')
 f.seek(5)
 f.read(1)
@@ -204,3 +205,36 @@ f.seek(-3, 2)
 f.read(1)
 
 f.close()
+
+print()
+
+print("f.close()")
+print("在文本文件中 (那些打开文件的模式下没有 b 的), 只会相对于文件起始位置进行定位。")
+print("当你处理完一个文件后, 调用 f.close() 来关闭文件并释放系统的资源，如果尝试再调用该文件，则会抛出异常")
+print("文件对象还有其他方法, 如 isatty() 和 trucate(), 但这些通常比较少用。")
+print()
+print("pickle 模块")
+print("python的pickle模块实现了基本的数据序列和反序列化。")
+print("通过pickle模块的序列化操作我们能够将程序中运行的对象信息保存到文件中去，永久存储。")
+print("")
+print("通过pickle模块的反序列化操作，我们能够从文件中创建上一次程序保存的对象。")
+print("pickle.dump(obj, file, [,protocol])")
+print("有了 pickle 这个对象, 就能对 file 以读取的形式打开:")
+print("x = pickle.load(file)")
+print("注解：从 file 中读取一个字符串，并将它重构为原来的python对象。")
+print("file: 类文件对象，有read()和readline()接口。")
+
+print()
+
+data1 = {'a': [1, 2.0, 3, 4 + 6j],
+         'b': ('string', u'Uicode string'), 'c': None}
+selfref_list = [1, 2, 3]
+selfref_list.append(selfref_list)
+
+
+output = open('data.pk1', 'wb')
+pickle.dump(data1, output)
+
+pickle.dump(selfref_list, output, -1)
+
+output.close()
