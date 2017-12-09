@@ -33,4 +33,19 @@ print("类对象")
 print("类对象支持两种操作：属性引用和实例化")
 print("属性引用使用和 Python 中所有的属性引用一样的标准语法：obj.name。")
 print("类对象创建后，类命名空间中所有的命名都是有效属性名。")
-print("")
+print()
+
+
+class MyClass(object):
+    i = 12345
+
+    def f(self):
+        return "hello python"
+
+
+# 实例化类
+x = MyClass()
+
+# 访问类的属性和方法
+print("MyClass 的类属性 i 为： ", x.i)
+print("MyClass 的类方法 f 为： ", x.f())
