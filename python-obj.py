@@ -79,3 +79,27 @@ class Test:
 
 t = Test()
 t.prt()
+
+
+print()
+
+print("在类地内部，使用 def 关键字来定义一个方法，与一般函数定义不同，类方法必须包含参数 self, 且为第一个参数，self 代表的是类的实例。")
+print()
+
+
+class people:
+    name = ''
+    age = 0
+    __weight = 0
+
+    def __init__(self, n, a, w):
+        self.name = n
+        self.age = 0
+        self.__weight = w
+
+    def speak(self):
+        print("%s 说： 我 %d 岁。" % (self.name, self.age))
+
+
+p = people('kai.fantasy', 10, 30)
+p.speak()
