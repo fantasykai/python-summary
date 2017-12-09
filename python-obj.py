@@ -49,3 +49,16 @@ x = MyClass()
 # 访问类的属性和方法
 print("MyClass 的类属性 i 为： ", x.i)
 print("MyClass 的类方法 f 为： ", x.f())
+print()
+
+
+class Complex(object):
+    """docstring for ClassName"""
+
+    def __init__(self, realpart, imagpart):
+        self.r = realpart
+        self.i = imagpart
+
+
+x = Complex(3.0, -4.5)
+print(x.r, x. i)
